@@ -1,16 +1,18 @@
-# @whitespace-se/docusaurus-plugin-cookieconsent
+# Docusaurus Plugin Cookie Consent
 
-A cookie consent plugin for Docusaurus with flexible analytics integration support.
+## Description
 
-## Installation
+A comprehensive cookie consent plugin for Docusaurus with flexible analytics integration support.
 
-```bash
-npm install @whitespace-se/docusaurus-plugin-cookieconsent
-```
+This plugin provides GDPR-compliant cookie consent functionality for Docusaurus sites, offering customizable banners and seamless integration with analytics platforms. It supports multi-language content, flexible positioning, and a callback system for handling user consent decisions.
 
-## Usage
+The plugin is designed with privacy and accessibility in mind, featuring proper ARIA labels, keyboard navigation support, and customizable styling using Docusaurus design tokens. It automatically handles cookie management and provides clear user controls for accepting or declining cookies.
 
-Add the plugin to your `docusaurus.config.js`:
+@whitespace-se/docusaurus-plugin-cookieconsent is maintained by web development specialists at [Whitespace](https://whitespace.se).
+
+## Basic Usage
+
+Add the plugin to your `docusaurus.config.js` with localized content:
 
 ```js
 module.exports = {
@@ -173,6 +175,30 @@ This plugin works with any analytics solution through the callback system:
 - **Google Analytics**: Use `gtag()` functions in callbacks
 - **Custom Analytics**: Implement your own tracking logic
 
+## How it Works
+
+**Production Environment**: The plugin automatically displays the cookie consent banner when users visit your site. The banner appears only if no previous consent decision has been recorded.
+
+**Development Environment**: The banner is hidden by default in development mode. Use the `debug: true` option to test the banner during development.
+
+**Cookie Management**: The plugin automatically sets cookies to remember user consent decisions:
+- `cookie_consent_accepted`: Set when user accepts cookies
+- `cookie_consent_denied`: Set when user declines cookies
+
+**Multi-language Support**: The plugin detects the current page language from `document.documentElement.lang` and displays appropriate content. Falls back to English if the detected language is not configured.
+
+## Installation
+
+```bash
+npm install @whitespace-se/docusaurus-plugin-cookieconsent
+```
+
+## Whitespace & Privacy
+
+We provide comprehensive support for GDPR compliance, privacy policy implementation, and cookie consent management. Our expertise helps organizations navigate complex privacy requirements while maintaining excellent user experiences.
+
+Learn more about [Whitespace & Privacy Solutions](https://whitespace.se).
+
 ## License
 
-MIT
+MIT © [Whitespace AB](https://whitespace.se)
