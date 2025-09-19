@@ -1,0 +1,48 @@
+.cookieConsentBanner {
+  position: fixed;
+  z-index: 9999;
+  max-width: 400px;
+}
+
+.cookieConsentButtonGroup {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.cookieConsentDescription {
+  margin-bottom: 1rem;
+}
+
+/* Position variants */
+.cookieConsentPositionTop {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cookieConsentPositionBottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cookieConsentPositionTopLeft {
+  top: 20px;
+  left: 20px;
+}
+
+.cookieConsentPositionTopRight {
+  top: 20px;
+  right: 20px;
+}
+
+.cookieConsentPositionBottomLeft {
+  bottom: 20px;
+  left: 20px;
+}
+
+.cookieConsentPositionBottomRight {
+  bottom: 20px;
+  right: 20px;
+}
